@@ -1,4 +1,4 @@
-# Redis data crud example
+# Redis data
 Redis can act as database, message broker or cache
 
 > Source: https://developer.redis.com/develop/java

@@ -1,6 +1,5 @@
 package com.unipi.ipap.springdatarediscrud.controller;
 
-import com.unipi.ipap.springdatarediscrud.entity.Cart;
 import com.unipi.ipap.springdatarediscrud.entity.Product;
 import com.unipi.ipap.springdatarediscrud.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
