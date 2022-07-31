@@ -1,0 +1,13 @@
+{
+  "properties": [
+    {
+      "name": "app.numberOfRatings",
+      "type": "java.lang.String",
+      "description": "Description for app.numberOfRatings."
+    },
+    {
+      "name": "app.ratingStars",
+      "type": "java.lang.String",
+      "description": "Description for app.ratingStars."
+    }
+  ] }

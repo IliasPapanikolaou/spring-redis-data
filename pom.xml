@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.2</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+  <groupId>com.unipi.ipap</groupId>
+  <artifactId>spring-data-redis-crud</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>spring-data-redis-crud</name>
+  <description>spring-data-redis-crud</description>
+  <properties>
+    <java.version>17</java.version>
+  </properties>
+  <dependencies>
+    <!-- Redis -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>redis.clients</groupId>-->
+<!--      <artifactId>jedis</artifactId>-->
+<!--      <version>3.8.0</version>-->
+<!--    </dependency>-->
+    <!-- Redis End -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <optional>true</optional>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>2.0.1.Final</version>
+    </dependency>
+    <!-- spring-security-crypto -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-crypto</artifactId>
+      <version>5.7.2</version>
+    </dependency>
+
+    <!-- spring configuration processor -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
+    </dependency>
+
+    <!-- RedisJSON is a Redis module that lets you store, update and fetch JSON values natively in Redis.
+    JSON can be a better fit for modeling complex data in Redis than Hashes because, unlike Hashes,
+    JSON values can contain nested arrays and objects. -->
+    <dependency>
+      <groupId>com.redislabs</groupId>
+      <artifactId>jrejson</artifactId>
+      <version>1.5.0</version>
+    </dependency>
+    <!-- RediSearch: https://developer.redis.com/develop/java/redis-and-spring-course/lesson_7 -->
+    <dependency>
+      <groupId>com.redislabs</groupId>
+      <artifactId>spring-redisearch</artifactId>
+      <version>3.1.2</version>
+    </dependency>
+    <!-- RedisGraph: https://developer.redis.com/develop/java/redis-and-spring-course/lesson_8 -->
+    <dependency>
+      <groupId>com.redislabs</groupId>
+      <artifactId>jredisgraph</artifactId>
+      <version>2.5.1</version>
+    </dependency>
+
+  </dependencies>
+
+  <repositories>
+    <repository>
+      <id>snapshots-repo</id>
+      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+            </exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
